@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Search Demo</title>
+  <link rel="stylesheet" href="css/searchdemo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/themes/smoothness/jquery-ui.css">
+  <script src="js/searchdemo.js"></script>
+  <script src="js/ajax-solr/core/Core.js"></script>
+  <script src="js/ajax-solr/core/AbstractManager.js"></script>
+  <script src="js/ajax-solr/managers/Manager.jquery.js"></script>
+  <script src="js/ajax-solr/core/Parameter.js"></script>
+  <script src="js/ajax-solr/core/ParameterStore.js"></script>
+  <script src="js/ajax-solr/core/AbstractWidget.js"></script>
+  <script src="js/ajax-solr/core/AbstractFacetWidget.js"></script>
+  <script src="js/ajax-solr/core/AbstractTextWidget.js"></script>
+  <script src="widgets/ResultWidget.js"></script>
+  <script src="widgets/TagcloudWidget.js"></script>
+  <script src="widgets/CurrentSearchWidget.js"></script>
+  <script src="widgets/AutocompleteWidget.js"></script>
+  <script src="widgets/jquery/PagerWidget.js"></script>
+  <script src="widgets/CalendarWidget.js"></script>
+
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>Search Demo</h1>
+      <h2>Browse Competitors news</h2>
+    </div>
+
+    <div class="right">
+      <div id="result">
+        <div id="navigation">
+          <ul id="pager"></ul>
+          <div id="pager-header"></div>
+        </div>
+        <div id="docs"></div>
+      </div>
+    </div>
+
+    <div class="left">
+      <h2>Current Selection</h2>
+      <ul id="selection"></ul>
+
+      <h2>Search</h2>
+      <span id="search_help">(press ESC to close suggestions)</span>
+      <ul id="search">
+        <input type="text" id="query" name="query" autocomplete="off">
+      </ul>
+
+      <h2>Top Topics</h2>
+      <div class="tagcloud" id="title"></div> <!-- Change the id according to the actual solr index-->
+
+      <h2>Top Organisations</h2>
+      <div class="tagcloud" id="url"></div>
+
+      <!--
+      <h2>Top Exchanges</h2>
+      <div class="tagcloud" id="exchanges"></div>
+      
+      <h2>By Country</h2>
+      <div id="countries"></div>
+      <div id="preview"></div>
+      -->
+      <h2>By Date</h2>
+      <div id="calendar"></div>
+
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</body>
+</html>
